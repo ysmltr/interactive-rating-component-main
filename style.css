@@ -1,32 +1,100 @@
 @import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap');
 
-:root{
---white: hsl(0, 0%, 100%);
---orange: hsl(25, 97%, 53%);
---lightGrey: hsl(217, 12%, 63%);
---darkBlue: hsl(213, 19%, 18%);
---veryDarkBlue: hsl(216, 12%, 8%);
---fontFamily: "Overpass", sans-serif;
---font-size: 15px;
+:root {
+    --white: hsl(0, 0%, 100%);
+    --orange: hsl(25, 97%, 53%);
+    --lightGrey: hsl(217, 12%, 63%);
+    --darkBlue: hsl(213, 19%, 18%);
+    --veryDarkBlue: hsl(216, 12%, 8%);
+    --fontFamily: "Overpass", sans-serif;
+    --font-size: 15px;
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: var(--fontFamily);
 }
 
-body{
+body {
     background-color: var(--veryDarkBlue);
     color: #f5f5f7;
     line-height: 1.6;
-    
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
-p{
+
+p {
     font-size: var(--font-size);
 }
 
-.rating-state{
+.rating-state {
     display: none;
+}
+
+div.star-img {
+    height: 50px;
+    width: 50px;
+    display: flex;
+    border-radius: 50%;
+    background-color: var(--lightGrey);
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    max-width: 400px;
+    background: #252d37;
+    border-radius: 30px;
+    padding: 35px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center; /* Centers text inside the container */
+}
+
+.feedback-form ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.feedback-form li {
+    background-color: var(--lightGrey);
+    color: var(--white);
+    padding: 15px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.feedback-form li:hover {
+    background-color: var(--orange);
+    color: var(--white);
+}
+
+button#submit-feedback {
+    background-color: var(--orange);
+    color: var(--white);
+    padding: 15px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: var(--font-size);
+    width: 100%;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+button#submit-feedback:hover {
+    background-color: hsl(25, 97%, 63%);
 }
