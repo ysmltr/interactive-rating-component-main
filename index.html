@@ -27,25 +27,17 @@
         <button class="rating-button">5</button>
       </div>
       
-      <button type="submit" class="submit-button">SUBMIT</button>
+      <button type="submit" id="submit-feedback">SUBMIT</button>
     </section>
     
-    <section class="rating-state">
-      <div class="rating-img">
-        <img src="./images/illustration-thank-you.svg" alt="Thank you illustration" >
-      </div>
-      <div class="rating-message">
-        <p class="message">
-          You selected <!-- Add rating here --> out of 5
-        </p>
-        <div class="rating">
-          <h1 class="rating-title">Thank you!</h1>
-          <div class="rating-description">
-            We appreciate you taking the time to give a rating. If you ever need more support, don’t hesitate to get in touch!
-          </div>
-        </div>
-      </div>
+    <section class="rating-state" style="display: none;">
+      <img src="./images/illustration-thank-you.svg" alt="Thank you illustration">
+      <p id="rating-result">You selected 4 out of 5</p>
+      <h2>Thank you!</h2>
+      <p>We appreciate you taking the time to give a rating. If you ever need more support, don't hesitate to get in touch!</p>
     </section>
   </main>
+
+  <script src="./review.js"></script>
 </body>
 </html>

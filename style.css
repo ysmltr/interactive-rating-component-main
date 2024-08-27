@@ -18,19 +18,21 @@
 }
 
 body {
-    font-family: 'Overpass', sans-serif;
     background-color: hsl(216, 12%, 8%);
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    font-family: 'Overpass', sans-serif;
+    color: hsl(217, 12%, 63%);
 }
 
-.card {
+.card, .rating-state {
     background-color: hsl(213, 19%, 18%);
     border-radius: 30px;
     padding: 2rem;
-    max-width: 412px;
+    max-width: 400px;
+    width: 100%;
 }
 
 .star-icon {
@@ -42,6 +44,24 @@ body {
     justify-content: center;
     align-items: center;
     margin-bottom: 2rem;
+}
+
+#submit-feedback{
+    background-color: hsl(25, 97%, 53%);
+    color: white;
+    border: none;
+    width: 100%;
+    padding: 0.8rem;
+    border-radius: 25px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+#submit-feedback:hover{
+    background-color: white;
+    color: hsl(25, 97%, 53%);
 }
 
 h1 {
@@ -57,8 +77,39 @@ p {
     margin-bottom: 2rem;
 }
 .rating-state {
-    display: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
+
+.rating-state img {
+    width: 150px;
+    margin-bottom: 2rem;
+}
+
+#rating-result {
+    background-color: hsl(213, 20%, 22%);
+    color: hsl(25, 97%, 53%);
+    padding: 0.5rem 2rem;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+}
+
+.rating-state h2 {
+    color: white;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+.rating-state p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 0;
+    max-width: 340px;
+}
+
 .rating-buttons {
     display: flex;
     justify-content: space-between;
@@ -88,13 +139,13 @@ p {
 }
 
 .submit-button {
-    width: 100%;
     background-color: hsl(25, 97%, 53%);
-    color: hsl(0, 0%, 100%);
+    color: white;
     border: none;
-    padding: 1rem;
+    width: 100%;
+    padding: 0.8rem;
     border-radius: 25px;
-    font-size: 15px;
+    font-size: 1rem;
     text-transform: uppercase;
     letter-spacing: 2px;
     cursor: pointer;
@@ -102,7 +153,7 @@ p {
 }
 
 .submit-button:hover {
-    background-color: hsl(0, 0%, 100%);
+    background-color: white;
     color: hsl(25, 97%, 53%);
 }
 
@@ -111,23 +162,20 @@ p {
 }
 
 @media (max-width: 375px) {
-    .card {
-        margin: 1rem;
+    .card, .rating-state {
+        max-width: 90%;
         padding: 1.5rem;
     }
 
-    .star-icon {
-        width: 40px;
-        height: 40px;
-        margin-bottom: 1.5rem;
+    .rating-state img {
+        width: 120px;
     }
 
-    h1 {
-        font-size: 24px;
+    .rating-state h2 {
+        font-size: 1.5rem;
     }
 
-    .rating-button {
-        width: 42px;
-        height: 42px;
+    .rating-state p {
+        font-size: 0.8rem;
     }
 }
